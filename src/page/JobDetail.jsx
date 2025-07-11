@@ -12,6 +12,7 @@ export function JobDetail() {
         url: `${import.meta.env.VITE_API_URL}/job/${jobId}/`,
       }).then((data) => {
         job = data;
+        document.title = job.name;
       });
     },
     view() {

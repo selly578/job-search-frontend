@@ -7,6 +7,7 @@ export function Home(){
 
   return {
     oninit() {
+      document.title = "TinyJob";
       m.request({
         method: "GET",
         url: `${import.meta.env.VITE_API_URL}job/`,

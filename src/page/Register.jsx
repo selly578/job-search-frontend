@@ -13,6 +13,9 @@ export function Register() {
   };
 
   return {
+    oninit(){
+      document.title = "Daftar akun baru";
+    },
     submit(e){
         e.preventDefault();
         loading = true;

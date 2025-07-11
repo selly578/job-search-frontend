@@ -11,6 +11,9 @@ export function Login() {
   var loading = false;
 
   return {
+    oninit(){
+      document.title = "Masuk";
+    },
     submit(e){
         e.preventDefault();
         loading = true;
