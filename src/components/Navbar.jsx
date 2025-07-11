@@ -9,7 +9,7 @@ export function Navbar() {
         <div class="navbar bg-base-100 shadow-sm">
           <div class="flex-1">
             <m.route.Link href="/" class="btn btn-ghost text-xl">
-              MiniJob
+              TinyJob
             </m.route.Link>
           </div>
 
