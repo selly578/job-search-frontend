@@ -12,6 +12,7 @@ export function JobDetail() {
         url: `${import.meta.env.VITE_API_URL}/job/${jobId}/`,
       }).then((data) => {
         job = data;
+        console.log(job);
         document.title = job.name;
       });
     },
@@ -22,7 +23,7 @@ export function JobDetail() {
 
       return (
         <div class="p-4 max-w-3xl mx-auto">
-          <h1 class="text-2xl font-bold mb-2">{job.name}</h1>
+          <h1 class="text-5xl font-bold mb-5">{job.name}</h1>
           {
                 username == job.author.username &&
                 <m.route.Link
@@ -35,7 +36,7 @@ export function JobDetail() {
               {
                 username == job.author.username &&
                 <button
-                  class="btn btn-sm btn-outline btn-error"
+                  class="btn btn-sm btn-outline btn-error mx-3"
                   onclick={() => {
                     // Handler hapus nanti taruh di sini
                   }}
@@ -71,7 +72,7 @@ export function JobDetail() {
           <div class="mt-6 pt-4 border-t">
             <h2 class="text-sm text-gray-500">Diposting oleh:</h2>
             <p class="text-base">
-              {job.author.username} | <a class="link link-primary link-hover" href= {`mailto:(${job.author.email})` }>{job.author.email}</a> 
+              {job.author.username} | <a class="link link-primary link-hover" href= {`mailto:(${job.author.email})` }>{job.author.email}</a>  | <a href="" class="link link-primary link-hover">{job.author.phone}</a>
             </p>
           </div>
 

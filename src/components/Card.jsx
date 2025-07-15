@@ -50,7 +50,7 @@ export function JobCard({ attrs }) {
                 <span class="font-semibold">Budget:</span> Rp {job.budget_from.toLocaleString()} – {job.budget_to.toLocaleString()}
               </p>
               <p>
-                <span class="font-semibold">Dibuat oleh:</span> {job.author.username} ({job.author.email})
+                <span class="font-semibold">Dibuat oleh:</span> <m.route.Link class="link link-primary link-hover" href={`/user/${job.author.id}`}>{job.author.username}</m.route.Link> ({job.author.email})
               </p>
               <p>
                 <span class="font-semibold">Tanggal posting:</span>{" "}
