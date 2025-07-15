@@ -6,6 +6,7 @@ import { Logout } from "./page/Logout";
 import { JobDetail } from "./page/JobDetail";
 import { Create } from "./page/Create";
 import { Edit } from "./page/Edit";
+import { Profile } from "./page/Profile";
 import { Layout } from "./Layout";
 import "./App.css"; 
 
@@ -44,5 +45,6 @@ m.route(root,"/",{
     "/job/new": withAuth(Create),
     "/job/:id": withLayout(JobDetail),
     "/job/:id/edit": withAuth(Edit),
+    "/user/:id": withLayout(Profile),
     
 })
