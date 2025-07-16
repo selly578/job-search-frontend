@@ -14,7 +14,7 @@ export function Profile(vnode){
                 method: "GET"
             }).then(async function(data){
                 user = data;
-                console.log(user);
+                document.title = user.username;
                 m.request({
                     url: `${import.meta.env.VITE_API_URL}/job/?author=${user.username}`,
                     method: "GET",
